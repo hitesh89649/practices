@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Archive Artifacts') {
                     steps {
-                        archiveArtifacts artifacts:'targets/*.jar',fingerprint:true
+                        archiveArtifacts artifacts:'targets/*.jar', fingerprint:true
                     }
                 }
         stage('Deploy') {
