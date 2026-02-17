@@ -30,5 +30,6 @@ public class LoginTest extends BaseTest {
                 loginPage.getSuccessMessage()
                         .contains("You logged into a secure area!")
         );
+        System.out.println("git 1st push");
     }
 }
