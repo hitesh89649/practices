@@ -16,7 +16,7 @@ public class BaseTest {
         System.out.println("Setup running...");
 
         ChromeOptions opt=new ChromeOptions();
-        //opt.addArguments("--headless=new");
+        opt.addArguments("--headless=new");
         opt.addArguments("--window-size=1920,1080");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(opt);
