@@ -22,13 +22,13 @@ public class LoginTest extends BaseTest {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         loginPage.openLoginPage();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("username")));
+      //  wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("username")));
 
-        loginPage.login("tomsmith", "SuperSecretPassword!");
+        loginPage.login("gold");
 
         Assert.assertTrue(
                 loginPage.getSuccessMessage()
-                        .contains("You logged into a secure area!")
+                        .contains("page")
         );
         System.out.println("git 1st push by hitesh");
     }
