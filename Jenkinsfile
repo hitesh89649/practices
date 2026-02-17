@@ -25,5 +25,17 @@ pipeline {
                 echo 'Running tests...'
             }
         }
+        stage('Archive Artifacts') {
+                    steps {
+                        archiveArtifacts artifacts:'targets/*.jar',fingerprint:true
+                    }
+                }
+        stage('Deploy') {
+                    steps {
+                        echo 'Deploying application..'
+                        bat 'echo Deployment Successful..'
+                    }
+                }
+
     }
 }
